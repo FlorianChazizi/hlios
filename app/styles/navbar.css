@@ -1,0 +1,90 @@
+/* General Navbar Styles */
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50; /* Ensures it stays above all other elements */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent; /* Initial transparent background */
+  color: white; /* White text for visibility over the hero section */
+}
+
+/* Add the solid background when scrolled */
+.navigation-bar.scrolled {
+  background-color: #689f38; /* Solid background color on scroll */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  color: white; /* Text color remains white */
+}
+
+.navigation-bar.is-open {
+  background-color: #689f38; /* Green background */
+  color: white; /* Ensure text remains visible */
+}
+
+/* Links */
+.navlinks {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  color: white; /* Default color for transparent state */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.navlinks:hover {
+  color: #ffc107; /* Bright Amber on hover */
+}
+
+/* Create the underline effect */
+.navlinks::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffc107; /* Underline color */
+  transform: scaleX(0); /* Initially collapsed */
+  transform-origin: left; /* Start animation from the left */
+  transition: transform 0.25s ease; /* Smooth transition effect */
+}
+
+/* On hover, expand the underline */
+.navlinks:hover::after {
+  transform: scaleX(1);
+  background-color: #ffc107;
+}
+
+/* Hamburger Menu */
+button[aria-label="Άνοιγμα μενού"] {
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu Styles */
+.md\\:hidden {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background for dropdown menu */
+}
+
+.md\\:hidden a {
+  color: white; /* White text for mobile menu */
+}
+
+.md\\:hidden a:hover {
+  color: #ffc107; /* Highlight color for mobile links */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hidden.md\\:flex {
+    display: none; /* Hide large screen links */
+  }
+
+  .md\\:hidden {
+    display: block; /* Show mobile menu */
+  }
+}

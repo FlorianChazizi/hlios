@@ -1,0 +1,62 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #EDEAE0;
+    color: #333; /* Dark text for contrast */
+    padding: 2rem;
+    height: 80vh; /* Full viewport height for large screens */
+  }
+  
+  .about .content {
+    max-width: 800px; /* Restrict width for better readability */
+    line-height: 1.8; /* Improve text spacing */
+  }
+  
+  .about h2 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 1rem;
+    color: #C88D3D; /* A nutty golden-brown color */
+    text-align: left;
+    border-bottom: 3px solid #c88d3d; /* Add a border below the heading */
+    width: 50%; /* Limit the border's width to 50% of the container */
+    padding-bottom: 0.5rem; /* Add some space between text and border */  }
+
+
+  .about p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about {
+      height: 80vh; /* Adjust height for smaller screens */
+      padding: 1rem; /* Reduce padding */
+    }
+  
+    .about h1 {
+      font-size: 2rem; /* Smaller heading for mobile */
+    }
+  
+    .about p {
+      font-size: 1rem; /* Adjust text size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about {
+      padding: 0.5rem; /* Further reduce padding for very small screens */
+    }
+  
+    .about h1 {
+      font-size: 1.8rem;
+    }
+  
+    .about p {
+      font-size: 0.9rem;
+    }
+  }
+  

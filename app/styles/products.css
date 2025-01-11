@@ -1,0 +1,141 @@
+/* Main container for the products */
+.products-container {
+    padding: 5rem 2rem ;
+    height: auto;
+    background-color: #EDEAE0;
+  }
+  
+  /* Title styling */
+  .product-header{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #C88D3D;
+  }
+  
+  /* Grid for larger screens */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+    gap: 1.5rem; 
+  }
+  .product-grid.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  
+  /* Product card styling */
+  .product-card {
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+
+  
+  /* Image styling */
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+
+  
+  /* Product name styling */
+  .product-name {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    background: linear-gradient(to right, #694f31, #A0522D, #fcbe03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.5s ease-in-out; /* Smooth animation */
+    background-size: 200%; /* Make the gradient bigger for smoother movement */
+    background-position: 50%; /* Initial position */
+  }
+  
+ 
+
+  .product-card:hover {
+    .product-image {
+        transform: scale(1.1);
+    }
+    .product-name{
+      background-position: 100%; /* Shift the gradient to the right */
+  
+    }
+  }
+  /* Category Buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #4e342e; /* Dark Chocolate */
+  background-color: #edeae0; /* Light Beige */
+  border: 2px solid #c88d3d; /* Golden Brown */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category-button:hover {
+  background-color: #c88d3d; /* Golden Brown */
+  color: white;
+}
+
+.category-button.active {
+  background-color: #4e342e; /* Dark Chocolate */
+  color: white;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Horizontal slider for smaller screens */
+@media (max-width: 768px) {
+  .product-grid {
+    display: flex; /* Switch to flexbox for horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 1rem; /* Space between items */
+    padding: 1rem; /* Add padding for better scrolling experience */
+  }
+
+  .product-card {
+    flex: 0 0 auto; /* Prevent shrinking and set a fixed size */
+    width: 200px; /* Set card width for consistency */
+  }
+
+  .product-grid::-webkit-scrollbar {
+    height: 8px; /* Custom scrollbar height */
+  }
+
+  .product-grid::-webkit-scrollbar-thumb {
+    background: #c88d3d; /* Thumb color */
+    border-radius: 4px; /* Rounded scrollbar thumb */
+  }
+
+  .product-grid::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Scrollbar track color */
+  }
+}

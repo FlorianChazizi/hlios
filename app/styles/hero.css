@@ -1,0 +1,90 @@
+.hero {
+    background-image: url("../assets/dnbanner3.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; 
+    animation: zoomInOut 13s infinite ease-in-out; 
+}
+
+@keyframes zoomInOut {
+    0% {
+      background-size: 100% 100%;
+      background-position: center;
+    }
+    50% {
+      background-size: 110% 110%;
+      background-position: center;
+    }
+    100% {
+      background-size: 100% 100%;
+      background-position: center;
+    }
+  }
+  @media (max-width: 480px) { /* For mobile screens */
+    .hero {
+      height: 80vh; /* Further reduce height on very small screens */
+       background-image: url("../assets/dnbanner-5.jpg");  
+      background-position: center;
+      background-size: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+      background-repeat: no-repeat; /* Prevents tiling */
+    }
+  }
+
+  .hero-content {
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+        letter-spacing: 0.8rem;
+      color: bisque;
+      text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  }
+  
+  /* Overlay for darkening t`he background */
+  .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      z-index: 1;
+  }
+  
+  
+  @media (max-width: 768px) { /* For tablets and smaller screens */
+      .hero {
+        height: 80vh; /* Reduces height for smaller devices */
+      }
+    }
+    
+    @media (max-width: 480px) { /* For mobile screens */
+      .hero {
+        height: 80vh; /* Further reduce height on very small screens */
+      }
+    }
+  
+
+    .hero-button {
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .hero-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }

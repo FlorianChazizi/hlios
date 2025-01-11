@@ -1,0 +1,77 @@
+.contact-us-section {
+    background-color: #ffffff;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #C88D3D;
+  }
+  
+  .contact-header h2 {
+    font-size: 2.5rem;
+    color: #C88D3D;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  /* Contact Info Cards */
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .contact-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Icons */
+  .contact-icon {
+    font-size: 2.5rem;
+    color: #FFC107;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-card:hover .contact-icon {
+    color: #689F38; /* Matches your brand color */
+  }
+  
+  /* Titles and Text */
+  .contact-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  .contact-card a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-card a:hover {
+    color: #689F38;
+  }
+  

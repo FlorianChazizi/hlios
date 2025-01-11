@@ -1,0 +1,92 @@
+/* Main Container */
+.partners-container {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.partners-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #C88D3D;
+}
+
+/* Carousel Wrapper */
+.partners-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Infinite Scrolling Effect */
+.partners-carousel {
+  display: flex;
+  animation: scrollPartners 20s linear infinite; /* Adjust speed here */
+}
+
+@keyframes scrollPartners {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Individual Partner Items */
+.partner-item {
+  flex: 0 0 auto;
+  margin: 0 1rem;
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 150px; /* Fixed height to center the image vertically */
+}
+
+.partner-image {
+  max-width: 100%; /* Ensure image fits within the container */
+  max-height: 100%; /* Ensure image fits within the container */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  height: 100px;
+  width: 150px;
+}
+
+.partner-image:hover {
+  transform: scale(1.1);
+}
+
+/* Fading Effect */
+.fade-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5%; /* Width of the fade */
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fade-overlay.left {
+  left: 0;
+  background: linear-gradient(to right, rgba(244, 244, 244, 1), rgba(244, 244, 244, 0));
+}
+
+.fade-overlay.right {
+  right: 0;
+  background: linear-gradient(to left, rgba(244, 244, 244, 1), rgba(244, 244, 244, 0));
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .partner-item {
+    height: 100px; /* Reduce height for smaller screens */
+  }
+
+  .partners-carousel {
+    animation: scrollPartners 15s linear infinite; /* Faster speed for smaller screens */
+  }
+}
