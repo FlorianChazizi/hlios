@@ -4,6 +4,7 @@ import AboutUs from "./components/AboutUs";
 import Line from "./components/Line";
 import Products from "./components/Products";
 import Partners from "./components/Partners";
+import ContactUs from "./components/ContactUs";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Line />
       <Products />
       <Partners />
+      <ContactUs />
 
     </div>
   );
